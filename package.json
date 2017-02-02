@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rosuav/full-stack-app.git"
+    "url": "git+https://github.com/jbenjaminy/full-stack-app.git"
   },
-  "author": "Chris Angelico (cangelico@thinkful.com)",
+  "author": "Ben Young (ben@jbenjaminy.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Rosuav/full-stack-app/issues"
+    "url": "https://github.com/jbenjaminy/full-stack-app/issues"
   },
-  "homepage": "https://github.com/Rosuav/full-stack-app#readme",
+  "homepage": "https://github.com/jbenjaminy/full-stack-app/blob/483e8a6aeabd572b294a7e2d9df1f784bff8c253/README",
   "dependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
