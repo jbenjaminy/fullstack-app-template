@@ -23,16 +23,19 @@
   $ npm run watch
  ```
 
-### TODO ###
-* Use makefiles to cut down on some of the work
+__TODO__
+* Use makefiles to cut down on some of the work.
+
 ***(e.g., `npm run start` currently runs `npm run build` unconditionally).***
 
 ## Acknowledgements ##
  * [Chris Angelico](https://gist.github.com/Rosuav)
  ***Forked from his [repository](https://github.com/Rosuav/full-stack-app)***
 
-### Note from the Original Author ###
+__Note from the Original Author__
+```
 ***The intention of this template is that you, the author of your app, should claim it as your own. Change all the URLs and authorship marks in package.json to be your own :)***
+```
 
-### License ###
-***This project is licensed under the MIT License - see the [LICENSE.md file](https://github.com/Rosuav/full-stack-app/blob/master/LICENSE) for details***
+## License ##
+This project is licensed under the MIT License - see the [LICENSE.md file](https://github.com/Rosuav/full-stack-app/blob/master/LICENSE) for details.
