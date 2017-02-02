@@ -40,4 +40,4 @@
 ### License ###
  * This project is licensed under the MIT License.
 
-  *See the [LICENSE](https://github.com/Rosuav/full-stack-app/blob/master/LICENSE) file for details.*
+  *(see the [LICENSE](https://github.com/Rosuav/full-stack-app/blob/master/LICENSE) file for details.)*
