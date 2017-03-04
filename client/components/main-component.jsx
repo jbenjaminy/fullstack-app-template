@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import NewPaula from './new-paula';
 
 class MainComponent extends React.Component {
