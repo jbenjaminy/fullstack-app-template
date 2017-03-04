@@ -4,11 +4,13 @@ import NewPaula from './new-paula';
 
 class MainComponent extends React.Component {
 	render() {
-		return <div>
+		return (
+		<div>
 			<h1>React/Redux demo</h1>
 			<p>This is where your content goes. Paula is {this.props.paula}.</p>
 			<NewPaula />
-		</div>;
+		</div>
+		);
 	}
 }
 
