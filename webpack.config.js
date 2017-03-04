@@ -1,8 +1,8 @@
 module.exports = {
-	entry: "./client/index.js",
+	entry: './client/index.jsx',
 	output: {
-		path: "./build",
-		filename: "app.js"
+		path: './build',
+		filename: 'app.js'
 	},
 	devtool: 'inline-source-map',
 	module: {
@@ -12,4 +12,4 @@ module.exports = {
 			loader: 'babel',
 		}]
 	},
-}
+};
