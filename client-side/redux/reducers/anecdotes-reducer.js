@@ -1,17 +1,29 @@
 import _ from 'lodash';
-import { FETCH_ANECDOTES_SUCCESS, CLEAR_ANECDOTES } from '../actions/types';
+import {
+    UPDATE_ANECDOTES_FORM,
+    FETCH_ANECDOTES_SUCCESS,
+    CLEAR_ANECDOTES
+} from '../actions/types';
 
-const INITIAL_STATE = [{
-    a: 'Tell others about yourself!',
-    uid: 'anecdote-default'
-}];
+const INITIAL_STATE = {
+    input: '',
+    anecdotes: [{
+        a: 'This is a place for you to tell others personal anecdotes!',
+        uid: 'default-string'
+    }],
+
+};
+
 
 export default (state = INITIAL_STATE, action = {}) => {
     switch (action.type) {
+        case UPDATE_ANECDOTES_FORM:
+            return { ...state, input: action.data.value };            
         case FETCH_ANECDOTES_SUCCESS: {
-            return _.map(action.data, (val, uid) => (
+            const anecdotes = _.map(action.data, (val, uid) => (
                 { ...val, uid }
             ));
+            return { ...state, input: '', anecdotes };
         }
         case CLEAR_ANECDOTES:
             return { ...state, ...INITIAL_STATE };

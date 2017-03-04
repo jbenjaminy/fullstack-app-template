@@ -18,8 +18,8 @@ export default (state = INITIAL_STATE, action = {}) => {
 		case FETCH_PROFILE_SUCCESS:
 			return action.data;
 		case REPORT_FAILURE:
-            console.error(`${action.type} failure:`);
-            console.error(action.error);
+            console.error(`${action.data.whatType} failure:`);
+            console.error(action.data.error);
             break;
         default: break;
 	}
