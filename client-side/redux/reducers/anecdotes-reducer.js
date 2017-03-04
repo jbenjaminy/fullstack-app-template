@@ -9,10 +9,9 @@ const INITIAL_STATE = [{
 export default (state = INITIAL_STATE, action = {}) => {
     switch (action.type) {
         case FETCH_ANECDOTES_SUCCESS: {
-            const anecdotes = _.map(action.data, (val, uid) => (
+            return _.map(action.data, (val, uid) => (
                 { ...val, uid }
             ));
-            return { ...state, anecdotes };
         }
         case CLEAR_ANECDOTES:
             return { ...state, ...INITIAL_STATE };
