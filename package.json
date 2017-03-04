@@ -1,5 +1,5 @@
 {
-  "name": "full-stack-app",
+  "name": "fullstack-app-template",
   "version": "0.0.0",
   "description": "Template full-stack JavaScript app",
   "main": "server.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbenjaminy/full-stack-app.git"
+    "url": "git+https://github.com/jbenjaminy/fullstack-app-template"
   },
   "author": "Ben Young (ben@jbenjaminy.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jbenjaminy/full-stack-app/issues"
+    "url": "https://github.com/jbenjaminy/fullstack-app-template/issues"
   },
-  "homepage": "https://github.com/jbenjaminy/full-stack-app/blob/483e8a6aeabd572b294a7e2d9df1f784bff8c253/README",
+  "homepage": "https://github.com/jbenjaminy/fullstack-app-template/blob/master/README.md",
   "dependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
