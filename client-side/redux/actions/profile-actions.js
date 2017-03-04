@@ -1,3 +1,8 @@
+export const PROFILE_FORM_UPDATE = 'PROFILE_FORM_UPDATE';
+export const UPDATE_PROFILE_DETAILS = 'UPDATE_PROFILE_DETAILS';
+export const FETCH_PROFILE_SUCCESS = 'FETCH_PROFILE_SUCCESS,';
+export const REPORT_FAILURE = 'REPORT_FAILURE';
+
 export const spamify_spam = () => ({
 	type: 'SPAMIFY_SPAM',
 })
