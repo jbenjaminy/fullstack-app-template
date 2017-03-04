@@ -18,6 +18,12 @@ app.use((req, res, next) => {
 app.post('/register', (req, res) => {
 	const email = req.body.email;
 	const password = req.body.password;
+    loginAdmin(username, password).then((err, data) => {
+        if (err) {
+            console.error(err);
+            return res.sendStatus(500);
+        }
+        res.json(data);
 	res.json({ message: 'Hello, world!' });
 });
 
