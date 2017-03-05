@@ -18,7 +18,7 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action = {}) => {
     switch (action.type) {
         case UPDATE_ANECDOTES_FORM:
-            return { ...state, input: action.data.value };            
+            return { ...state, input: action.data.value };
         case FETCH_ANECDOTES_SUCCESS: {
             const anecdotes = _.map(action.data, (val, uid) => (
                 { ...val, uid }

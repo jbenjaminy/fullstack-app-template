@@ -22,23 +22,26 @@ export const reportFailure = (whatType, error) => ({
 });
 
 export const fetchProfileDetails = () => dispatch => (
-	fetch('/profile').then(response => {
-		if (!response.ok) throw (new Error(response.statusText));
-		return response.json();
-	}).then(profile =>
-		dispatch(fetchProfileSuccess(profile))
-	).catch(error =>
-		dispatch(reportFailure('fetch profile details', error))
+	fetch('/profile').then(res => {
+		if (!res.ok) throw (new Error(res.statusText));
+		return res.json();
+	}).then(data =>
+		dispatch(fetchProfileSuccess(data))
+	).catch(err =>
+		dispatch(reportFailure('fetch profile details', err))
 	)
 );
 
-export const updateProfileDetails = () => dispatch => (
-	fetch('/profile').then(response => {
-		if (!response.ok) throw (new Error(response.statusText));
-		return response.json();
+export const updateProfileDetails = (profile) => dispatch => (
+	fetch('/profile', {
+        method: 'POST',
+        body: JSON.strigify({ profile })
+    }).then(res => {
+		if (!res.ok) throw (new Error(res.statusText));
+		return res.json();
 	}).then(data =>
-		dispatch(fetchProfileSuccess(data.message))
-	).catch(error =>
-		dispatch(reportFailure('update profile details', error))
+		dispatch(fetchProfileSuccess(data))
+	).catch(err =>
+		dispatch(reportFailure('update profile details', err))
 	)
 );

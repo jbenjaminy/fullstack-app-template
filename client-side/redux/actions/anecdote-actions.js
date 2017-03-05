@@ -6,7 +6,6 @@ import {
     REPORT_FAILURE
 } from './types';
 
-/* Single action creator to handle any update to the form. */
 export const anecdotesFormUpdate = ({ prop, value }) => ({
     type: ANECDOTES_FORM_UPDATE,
     data: { prop, value }
@@ -27,26 +26,26 @@ export const reportFailure = (whatType, error) => ({
 });
 
 export const fetchAnecdotesList = () => dispatch => (
-	fetch('/anecdotes').then(response => {
-		if (!response.ok) throw (new Error(response.statusText));
-		return response.json();
+	fetch('/anecdotes').then(res => {
+		if (!res.ok) throw (new Error(res.statusText));
+		return res.json();
 	}).then(data =>
 		dispatch(fetchAnecdotesSuccess(data.message))
-	).catch(error =>
-		dispatch(reportFailure('update profile details', error))
+	).catch(err =>
+		dispatch(reportFailure('fetch anecdote list', err))
 	)
 );
 
 export const createAnecdote = (anecdote) => dispatch => (
-	fetch('/anecdote', {
+	fetch('/anecdotes', {
         method: 'POST',
         body: JSON.strigify({ anecdote })
-    }).then(response => {
-		if (!response.ok) throw (new Error(response.statusText));
-		return response.json();
-	}).then(profile =>
-		dispatch(fetchAnecdotesSuccess(profile))
-	).catch(error =>
-		dispatch(reportFailure('fetch profile details', error))
+    }).then(res => {
+		if (!res.ok) throw (new Error(res.statusText));
+		return res.json();
+	}).then(data =>
+		dispatch(fetchAnecdotesSuccess(data))
+	).catch(err =>
+		dispatch(reportFailure('create anecdote', err))
 	)
 );
